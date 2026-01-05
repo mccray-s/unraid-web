@@ -1,0 +1,15 @@
+---
+import BaseLayout from './Default.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout {...frontmatter}>
+  <div class="glass-panel p-8 sm:p-12 rounded-2xl max-w-3xl mx-auto my-8">
+    <div class="prose prose-neutral dark:prose-invert m-auto max-w-none">
+      <h1 class="mb-2 text-3xl font-bold">{frontmatter.title}</h1>
+      {frontmatter.description && <p class="opacity-70 mt-0 mb-8 italic">{frontmatter.description}</p>}
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

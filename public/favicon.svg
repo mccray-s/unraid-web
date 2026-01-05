@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="112 112 800 800" class="relative z-10 transition-all duration-500" id="main-icon-svg">
+    <defs>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1024" height="1024" rx="256" fill="#F15A24" id="main-bg-rect"/>
+
+    <!-- Abstract Server/Stack Symbol -->
+    <!-- CENTERED: Total Height 420px. (1024-420)/2 = 302px Y-offset -->
+    <!-- CENTERED: Total Width 500px. (1024-500)/2 = 262px X-offset -->
+    <g transform="translate(262, 302)"> 
+        
+        <!-- Server Unit 1 (Top) -->
+        <rect x="0" y="0" width="500" height="120" rx="24" fill="white" opacity="0.95"/>
+        <!-- Status LED Green -->
+        <circle cx="450" cy="60" r="18" fill="#22c55e"/>
+        <!-- Drive Bay Line (单条加粗) -->
+        <rect class="drive-line" x="50" y="48" width="320" height="24" rx="12" fill="#F15A24"/>
+
+        <!-- Server Unit 2 (Middle) -->
+        <rect x="0" y="150" width="500" height="120" rx="24" fill="white" opacity="0.85"/>
+        <!-- Status LED Orange (Activity) -->
+        <circle cx="450" cy="210" r="18" fill="#f59e0b"/>
+        <!-- Drive Bay Line (单条加粗) -->
+        <rect class="drive-line" x="50" y="198" width="320" height="24" rx="12" fill="#F15A24"/>
+
+        <!-- Server Unit 3 (Bottom) -->
+        <rect x="0" y="300" width="500" height="120" rx="24" fill="white" opacity="0.75"/>
+            <!-- Status LED Green -->
+        <circle cx="450" cy="360" r="18" fill="#22c55e"/>
+        <!-- Drive Bay Line (单条加粗) -->
+        <rect class="drive-line" x="50" y="348" width="320" height="24" rx="12" fill="#F15A24"/>
+    </g>
+    
+</svg>

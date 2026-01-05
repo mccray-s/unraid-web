@@ -1,0 +1,4 @@
+/*
+  Legacy prose.css removed to prevent conflicts with UnoCSS presetTypography.
+  We are now relying on utility classes and preset defaults for better dark mode support.
+*/

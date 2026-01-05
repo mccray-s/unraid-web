@@ -1,0 +1,38 @@
+---
+import BaseHead from '@/components/BaseHead.astro'
+import Footer from '@/components/Footer.vue'
+import Header from '@/components/Header.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
+import { ViewTransitions, fade } from 'astro:transitions'
+
+const { ...head } = Astro.props
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead {...head} />
+    <ViewTransitions />
+  </head>
+  <body
+    class="bg-main text-main font-sans w-full min-h-screen flex flex-col selection:bg-primary-100 selection:text-primary-700 dark:selection:bg-primary-900/30 dark:selection:text-primary-300 relative"
+  >
+    <!-- Global Background Glow -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary-400/20 dark:bg-primary-500/10 rounded-full blur-3xl opacity-50"
+      >
+      </div>
+    </div>
+
+    <Header client:load />
+    <main
+      class="flex-grow w-full max-w-7xl mx-auto pt-24 pb-16 px-6 relative"
+      transition:animate={fade({ duration: '0.4s' })}
+    >
+      <slot />
+    </main>
+    <Footer />
+    <ScrollToTop client:load />
+  </body>
+</html>

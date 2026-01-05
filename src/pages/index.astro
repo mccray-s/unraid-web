@@ -1,0 +1,73 @@
+---
+import FeatureCard from '@/components/FeatureCard.astro'
+import Hero from '@/components/Hero.astro'
+import DefaultLayout from '@/layouts/Default.astro'
+import siteConfig from '@/site-config'
+import ScreenshotGallery from '@/components/ScreenshotGallery.vue'
+
+const features = [
+  {
+    title: 'Real-time Dashboard',
+    description: 'Monitor CPU, Memory, and Network usage with live updates via WebSocket.',
+    icon: 'i-ri-dashboard-line',
+  },
+  {
+    title: 'Docker Management',
+    description: 'Start, stop, and restart containers. View real-time logs and manage power states in batch.',
+    icon: 'i-mdi-docker',
+  },
+  {
+    title: 'Storage Insights',
+    description: 'Visual array status, disk health monitoring (SMART), and individual disk telemetry.',
+    icon: 'i-ri-hard-drive-2-line',
+  },
+  {
+    title: 'Multi-Server Support',
+    description: 'Seamlessly switch between multiple Unraid servers. Perfect for home lab enthusiasts.',
+    icon: 'i-ri-server-line',
+  },
+  {
+    title: 'Secure by Design',
+    description: 'Face ID / Touch ID protection ensures only you can access your server configuration.',
+    icon: 'i-ri-shield-check-line',
+  },
+  {
+    title: 'Custom Icons',
+    description: 'Upload your own images as personalized container icons.',
+    icon: 'i-ri-palette-line',
+  },
+]
+---
+
+<DefaultLayout description={siteConfig.description}>
+  <Hero
+    title="Your Unraid Server, Reimagined."
+    subtitle="The most beautiful and powerful iOS companion for Unraid. Manage your server with style and ease."
+  />
+
+  <ScreenshotGallery client:visible />
+
+  <section id="features" class="py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        features.map((feature) => (
+          <FeatureCard title={feature.title} description={feature.description} icon={feature.icon} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-neutral-900 dark:text-white">Ready to get started?</h2>
+    <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+      Join thousands of users managing their Unraid servers with Unraid Manager.
+    </p>
+    <a
+      href="#"
+      class="glass-button px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center gap-2 hover:scale-105 transition-transform"
+    >
+      <div class="i-simple-icons-apple text-xl"></div>
+      Download on App Store
+    </a>
+  </section>
+</DefaultLayout>
