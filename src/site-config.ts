@@ -2,9 +2,9 @@ export const siteConfig = {
   author: 'mccray',
   title: 'Unraid Deck',
   subtitle: 'The beautiful, native iOS companion for your Unraid server.',
-  description: 'Manage Docker containers, VMs, and monitor system health with the new Liquid Glass design.',
+  description: 'The fastest way to monitor and manage your Unraid server. A native Unraid iOS App that lets you control Docker containers, VMs, and check stats directly from your iPhone. Built for the Unraid API.',
   image: {
-    src: '/hero.jpg',
+    src: '/images/screenshot-01.jpg',
     alt: 'Unraid Deck',
   },
   email: 'apps.mccray@gmail.com',
@@ -25,6 +25,10 @@ export const siteConfig = {
       {
         text: 'Home',
         href: '/',
+      },
+      {
+        text: 'Blog',
+        href: '/blog',
       },
       {
         text: 'Privacy',

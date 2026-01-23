@@ -19,7 +19,7 @@ export default defineConfig({
     },
     {
       'text-title': 'text-neutral-900 dark:text-white text-4xl font-800',
-      'nav-link': 'text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 cursor-pointer',
+      'nav-link': 'text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 cursor-pointer text-base',
       'prose-link': 'text-primary-600 dark:text-primary-400 decoration-none hover:underline',
       'container-link': 'p-2 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 cursor-pointer',
     },

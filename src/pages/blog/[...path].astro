@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import ListPosts from '@/components/ListPosts.vue'
+import PostList from '@/components/PostList.vue'
 import siteConfig from '@/site-config'
 import { getPosts } from '@/utils/posts'
 
@@ -44,5 +44,5 @@ function activeLink(pathname: string) {
       ))
     }
   </div>
-  <ListPosts list={posts} />
+  <PostList list={posts} />
 </BaseLayout>

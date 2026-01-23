@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
 export default defineConfig({
-  site: 'https://mccray.app/',
+  site: 'https://unraid.mccray.app/',
 
   server: {
     port: 1977,

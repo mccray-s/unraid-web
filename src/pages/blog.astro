@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content'
+import DefaultLayout from '@/layouts/Default.astro'
+import Box from '@/components/FeatureCard.astro'
+import PostList from '@/components/PostList.vue'
+import siteConfig from '@/site-config'
+
+const posts = await getCollection('blog')
+const title = 'Blog'
+const description = 'Updates, guides, and news about Unraid Deck.'
+
+const sortedPosts = posts
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
+---
+
+<DefaultLayout title={title} description={description}>
+  <div class="prose dark:prose-invert max-w-none">
+    <h1 class="text-3xl font-bold mb-8">Blog</h1>
+    <PostList list={sortedPosts} />
+  </div>
+</DefaultLayout>
